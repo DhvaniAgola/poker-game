@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: "poker game"
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hiberante:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        enable_lazy_load_no_trans: true
+    open-in-view: false
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/poker_db?serverTimezone=UTC&SSL=false
+    username: root
+    password: xxx
+  devtools:
+    restart:
+      enabled: true
+server:
+  port: 8089
+  address: localhost
